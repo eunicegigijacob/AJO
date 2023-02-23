@@ -18,6 +18,15 @@ const handleErrors = (err) => {
     });
   }
 
+  // Incorrect email for login
+  if (err.message === 'Incorrect email') {
+    errors.email = 'That email is not registered';
+  }
+
+  // Incorrect password for login
+  if (err.message === 'Incorrect password') {
+    errors.password = 'That password is incorrect';
+  }
   return errors;
 };
 

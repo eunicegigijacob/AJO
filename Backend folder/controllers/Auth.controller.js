@@ -27,22 +27,20 @@ const AuthControls = {
 
   login: async (req, res) => {
     const { email, password } = req.body;
-    console.log(email, password);
     if (!email || !password) {
       res.status(400).json('Please enter your email and password');
     }
     try {
       const customer = await Customer.login(email, password);
-      console.log(customer);
-      //   const token = createToken.loginToken(customer._id);
-      //   console.log(token);
-      //   res.cookie('jwt', token, {
-      //     httpOnly: true,
-      //     maxAge: 1000 * 60 * 60 * 2,
-      //   });
+      const token = createToken.loginToken(customer._id);
+      res.cookie('jwt', token, {
+        httpOnly: true,
+        maxAge: 1000 * 60 * 60 * 2,
+      });
       res.status(200).json({ user: customer._id });
     } catch (error) {
-      res.status(400).json({});
+      const errors = handleErrors(error);
+      res.status(400).json({ errors });
     }
   },
 };

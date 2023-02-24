@@ -4,7 +4,7 @@ const customerServices = {
   createCustomer: async (newUser) => {
     return await Customer.create(newUser);
   },
-  findCustomer: async (email) => {
+  findCustomerByEmail: async (email) => {
     return await Customer.findOne({ email });
   },
 };

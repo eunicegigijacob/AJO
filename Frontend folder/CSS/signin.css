@@ -14,11 +14,16 @@ body{
 
 input{
   height: 56px;
-  border-radius: 8px;
+  border: none;
+  border-radius: 15px;
   font-size: 16px;
   padding: 0 10px;
   }
 
+  .email-i put{
+    width: 520px;
+  }
+  
   .password-container svg{
     width: 10%;
   }

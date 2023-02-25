@@ -27,6 +27,11 @@ const handleErrors = (err) => {
   if (err.message === 'Incorrect password') {
     errors.password = 'That password is incorrect';
   }
+
+  // incorrect email for reset-password
+  if (err.message.includes('There is no user with email address')) {
+    errors.error = err.message;
+  }
   return errors;
 };
 

@@ -1,7 +1,11 @@
 const { Customer } = require('../models/Customer.model');
 const { customerServices } = require('../services/customer');
 const { handleErrors } = require('../utils/errorHandler');
+const { forgetPassword } = require('../utils/forgetpassword.util');
 const { createToken } = require('../utils/token.utils');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const AuthControls = {
   signup: async (req, res) => {
@@ -41,6 +45,25 @@ const AuthControls = {
     } catch (error) {
       const errors = handleErrors(error);
       res.status(400).json({ errors });
+    }
+  },
+
+  forgetPassword: async (req, res) => {
+    const { email } = req.body;
+    const host = req.get('host');
+    const url = `${req.protocol}://${host}/api/v1/auth/reset-password`;
+
+    try {
+      await forgetPassword(email, url, process.env.SENDER_EMAIL);
+
+      res.status(200).json({
+        status: 'successfull',
+        data: 'Reset password link has been sent',
+      });
+    } catch (error) {
+      const errors = handleErrors(error);
+
+      res.status(200).json({ errors });
     }
   },
 };

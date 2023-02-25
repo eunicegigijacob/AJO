@@ -20,10 +20,18 @@ input{
   padding: 0 10px;
   }
 
-  .email-i put{
+  .email-input{
     width: 520px;
   }
   
+  .bottom{
+    display: flex;
+    align-items: center;
+    height: 56px;
+    border: none;
+    border-radius: 8px;
+  }
+
   .password-container svg{
     width: 10%;
   }
@@ -45,6 +53,7 @@ input{
 
   .check{
     display: flex;
+    justify-content: space-between;
   }
   
   .special{

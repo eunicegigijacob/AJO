@@ -66,6 +66,10 @@ const AuthControls = {
       res.status(200).json({ errors });
     }
   },
+
+  renderResetPasswordPage: (req, res) => {
+    res.render('reset-password');
+  },
 };
 
 module.exports = { AuthControls };

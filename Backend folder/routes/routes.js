@@ -13,7 +13,7 @@ routemanager.get(
 );
 routemanager.post(
   '/api/v1/auth/reset-password/:id/:token',
-  AuthControls.forgetPassword
+  AuthControls.resetPassword
 );
 
 module.exports = { routemanager };

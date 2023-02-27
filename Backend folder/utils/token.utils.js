@@ -9,8 +9,13 @@ const createToken = {
   },
   passwordResetToken: (data, password) => {
     const secrete = process.env.SECRETE_KEY + password;
-    return jwt.sign({ data }, secrete, { expiresIn: '3m' });
+    return jwt.sign({ data }, secrete, { expiresIn: '30m' });
   },
 };
 
-module.exports = { createToken };
+const verifyResetToken = (token, password) => {
+  const secrete = process.env.SECRETE_KEY + password;
+  return jwt.verify(token, secrete);
+};
+
+module.exports = { createToken, verifyResetToken };

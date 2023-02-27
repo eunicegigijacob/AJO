@@ -7,6 +7,10 @@ const customerServices = {
   findCustomerByEmail: async (email) => {
     return await Customer.findOne({ email });
   },
+
+  findCustomerById: async (id) => {
+    return await Customer.findById(id);
+  },
 };
 
 module.exports = { customerServices };

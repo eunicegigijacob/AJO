@@ -49,6 +49,11 @@ const AuthControls = {
     }
   },
 
+  logout: async (req, res) => {
+    res.cookie('jwt', '', { maxAge: 1 });
+    res.json('User logged out');
+  },
+
   forgetPassword: async (req, res) => {
     const { email } = req.body;
     const host = req.get('host');

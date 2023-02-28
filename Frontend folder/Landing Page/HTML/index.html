@@ -29,8 +29,10 @@
                 </div>
 
                 <div class="btn">
-                    <button id="signinBtn" class="login">Sign in</button>
-                    <button id="signupBtn" class="get">Get Started</button>
+                <form onsubmit="signin()">
+                    <input type="submit" id="signinBtn" class="login" value="Sign in"/>
+                    <input type="submit" id="signupBtn" class="get" value="Get Started"/>
+                </form>
                 </div>
                 </nav>
             </header>
@@ -187,5 +189,6 @@
             <p>Can't find your answer? We're here to help!</p>
         </div>
     </section>
+    <script src="../JS/landing.js"></script>
 </body>
 </html>

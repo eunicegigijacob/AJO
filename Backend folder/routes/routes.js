@@ -8,6 +8,7 @@ const routemanager = express.Router();
 // Auth routes
 routemanager.post('/api/v1/auth/signup', AuthControls.signup);
 routemanager.post('/api/v1/auth/login', AuthControls.login);
+routemanager.get('/api/v1/auth/logout', AuthControls.logout);
 routemanager.post('/api/v1/auth/forget-password', AuthControls.forgetPassword);
 routemanager.get(
   '/api/v1/auth/reset-password/:id/:token',

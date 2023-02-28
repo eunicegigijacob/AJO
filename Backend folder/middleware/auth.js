@@ -14,7 +14,6 @@ const authMiddlewares = {
           res.status(400).json({ errors, message: 'user not loggrd in' });
         } else {
           req.decoded = decoded;
-          console.log(decoded);
           next();
         }
       });

@@ -29,6 +29,11 @@ const CustomerSchema = new Schema({
     type: String,
     required: [true, 'Please enter password'],
   },
+  walletBalance: {
+    type: Number,
+    default: 0.0,
+    required: true,
+  },
 });
 
 CustomerSchema.pre('save', async function (next) {

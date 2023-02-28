@@ -29,7 +29,9 @@ const handleErrors = (err) => {
   }
 
   // catch for other undefined errors
-  errors.error = err.message;
+  // else {
+  //   errors.error = err.message;
+  // }
 
   return errors;
 };

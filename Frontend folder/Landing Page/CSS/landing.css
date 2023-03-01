@@ -27,13 +27,19 @@ a{
     color: #4E4B66;
 }
 
+.btn{
+    display: flex;
+    justify-content:space-around;
+}
 .login{
     font-size: 15px;
     font-weight: 400;
     padding: 8px;
     width: 105px;
     height: 44px;
+    background: white;
     border: 1px solid #2A5C99;
+    padding-right: 10px;
     border-radius: 8px;
     cursor: pointer;
     transition: .3s;
@@ -44,10 +50,11 @@ a{
     font-size: 15px;
     font-weight: 400;
     padding: 8px;
-    width: 120px;
+    width: 105px;
     height: 44px;
     background: #2A5C99;
     border: 2px solid #2A5C99;
+    margin-left: 20px;
     border-radius: 8px;
     cursor: pointer;
     transition: .3s;
@@ -192,8 +199,7 @@ header .container{
 }
 
 .section-two-wrapper{
-    display: flex;
-    justify-content: center;
+    display: block;
     align-items: center; 
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 5px
@@ -204,14 +210,9 @@ header .container{
     height: 100%;
 }
 
-.about-image{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .describe-us{
-    padding-left: 83px;
+    padding-left: 20px;
+    float: left;
     gap: 32px;
     width: 547px;
     height: 280px;

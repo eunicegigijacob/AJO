@@ -12,7 +12,7 @@ body{
 .hero__section{
     width: 100%;
     max-width: 1440px;
-    height: 1055px;
+    height: 1000px;
     position: relative;
     padding: 0 20px;
 }
@@ -173,9 +173,14 @@ header .container{
     transform: scale(1) !important;
 }
 
-.inner-container1{
-    padding-left: 90px;
+.About__section{
+    width: 100%;
+    max-width: 1440px;
+    height: 800px;
+    position: relative;
+    padding: 0 20px;
 }
+
 
 .abs{
     font-size: 24px;
@@ -187,19 +192,16 @@ header .container{
 }
 
 .section-two-wrapper{
-    display:flex;
-    justify-content: space-between;
-    padding-top: 50px;
-    width: 100%;
-    max-width: 1240px;
-    height: 400px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px
 }
 
 .wrapper2{
     width: 544px;
-    height: 375px;
-    margin-right: 20px;
+    height: 100%;
 }
 
 .about-image{
@@ -228,6 +230,13 @@ header .container{
     cursor: pointer;
 }
 
+.Offer__section{
+    width: 100%;
+    max-width: 1440px;
+    height: 500px;
+    position: relative;
+    padding: 0 20px;
+}
 
 .offer{
     font-size: 24px;
@@ -303,14 +312,6 @@ header .container{
     background:#9BC8FF4D;
 }
 
-.question{
-    width: 100%;
-    max-width: 1440px;
-    height: 1000px;
-    position: relative;
-    padding: 0 20px;
-    background-color: #2A5C99;
-}
 
 .inner-container2{
     width: 100%;
@@ -334,24 +335,35 @@ header .container{
     align-items: center;
 }
 
+.Contact{
+    width: 100%;
+    max-width: 1440px;
+    height: 514px;
+    padding:0 20px;
+    background-color: #2A5C99;
+}
 .customer-care{
-    padding-top: 194px;
+    padding-top: 90px;
+}
+
+.any{
+    font-size: 30px;
 }
 
 .customer{  
-    font-size: 24px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 38px;
     letter-spacing: 0em;
     text-align: left;
-    height: 76px;
+    height: 60px;
     width: 484px;
     left: 100px;
     border-radius: nullpx;
 }
 
 .e-mail{
-    font-size: 24px;
+    font-size: 15px;
     font-weight: 600;
     line-height: 29px;
     letter-spacing: 0em;
@@ -378,10 +390,79 @@ header .container{
     padding-top: 50px;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 15px;
     line-height: 120%;
     width: 364px;
     height: 29px;
+}
+
+.faq-section{
+    width: 100%;
+    margin: auto;
+    padding-top: 20px;
+    height: 700px;
+}
+.question-container{
+    max-width: 900px;
+    margin: auto;
+}
+
+.question-container h3{
+    margin: 15px, 0;
+    letter-spacing: 3px;
+    padding-left: 110px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    height: 15px;
+    width: 671px;
+
+}
+
+.question-container h2{
+    margin: 10px, 0;
+    padding-left: 100px;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 400;
+    width: 510px;
+}
+
+.accord{
+    background-color: #D9DBE9;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    width: 100%;
+    padding: 20px 15pxrem;
+    border: none;
+    outline:none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accord i{
+    font-size: 13px;
+}
+
+active.accord:hover{
+    background-color: #f1f7f5;
+}
+
+.pannel{
+    padding: 0 2rem 2.5rem 2rem;
+    background-color: white;
+    gap: 20px;
+}
+
+.pannel p{
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 10px;
+    line-height: 1.4;
+
 }
 
 .footer-container{

@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const { handleErrors } = require('../utils/errorHandler');
 
 const authMiddlewares = {
   verifyLoginToken: (req, res, next) => {
@@ -9,16 +10,17 @@ const authMiddlewares = {
       jwt.verify(token, process.env.SECRETE_KEY, (err, decoded) => {
         if (err) {
           console.log(err);
-          res.status(400).json({ message: 'Invalid Token' });
+          const errors = handleErrors(err);
+          res.status(400).json({ errors, message: 'user not loggrd in' });
         } else {
-          console.log(decoded);
+          req.decoded = decoded;
           next();
         }
       });
     } else {
-      res.status(400).json({ message: 'this is a protected page' });
+      res.status(400).json({ error: 'this is a protected page' });
     }
   },
 };
 
-module.exports = {};
+module.exports = { authMiddlewares };

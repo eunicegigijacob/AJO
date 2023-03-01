@@ -383,3 +383,36 @@ header .container{
     width: 364px;
     height: 29px;
 }
+
+.footer-container{
+    width:  100%;
+    max-width: 1440px;
+    height: 442px;
+    margin: auto;   
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+ul{
+    list-style: none;
+}
+.footer{
+    background-color: #2A5C99;
+    padding: 70px 0;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+
+}
+
+.footer-col h4{
+    font-size: 16PX;
+    font-weight: 600;
+    color: #ffffff;
+}

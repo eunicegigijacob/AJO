@@ -175,6 +175,7 @@ header .container{
     transition: .3s;
 }
 
+
 .bbt:hover{
     color:#14142B;
     transform: scale(1) !important;
@@ -185,7 +186,7 @@ header .container{
     max-width: 1440px;
     height: 800px;
     position: relative;
-    padding: 0 20px;
+    padding-top: 30px;
 }
 
 
@@ -196,26 +197,28 @@ header .container{
     padding-top: 100px;
     letter-spacing: 0px;
     text-align: center;
+    padding-bottom: 50px;
 }
 
 .section-two-wrapper{
-    display: block;
-    align-items: center; 
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 5px
+    display: flex;
+    justify-content: space-between;
+    
 }
+    
 
-.wrapper2{
-    width: 544px;
-    height: 100%;
+.about-image{
+    width: 45%;
+    padding
 }
 
 .describe-us{
-    padding-left: 20px;
-    float: left;
-    gap: 32px;
-    width: 547px;
-    height: 280px;
+    width: 50%;
+    padding-top: 50px;
+}
+
+.describe-us p{
+    padding-bottom: 20px;
 }
 
 .mssg{
@@ -229,6 +232,12 @@ header .container{
     border: 2px solid #2A5C99;
     border-radius: 8px;
     cursor: pointer;
+    transition: .3s;
+}
+
+.mssg:hover{
+    color: white;
+    transform: scale(1) !important;
 }
 
 .Offer__section{

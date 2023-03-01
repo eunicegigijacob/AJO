@@ -5,9 +5,7 @@ dotenv.config();
 const connectDB = async () => {
   mongoose.set('strictQuery', false);
   mongoose
-    .connect(process.env.DB_URL, {
-      useNewUrlParser: true,
-    })
+    .connect(process.env.DB_URL)
     .then(() => console.log('Database connected successfully'))
     .catch((err) => {
       console.log(err);

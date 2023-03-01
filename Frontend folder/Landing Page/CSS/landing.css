@@ -450,6 +450,9 @@ ul{
 .footer{
     background-color: #2A5C99;
     padding: 70px 0;
+    width: 100%;
+    max-width: 1440px;
+    box-sizing: border-box;
 }
 
 .footer-col{

@@ -383,3 +383,117 @@ header .container{
     width: 364px;
     height: 29px;
 }
+
+.footer-container{
+    max-width: 1440px;
+    height: 442px;
+    background-color: transparent;
+    margin: auto;   
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.logo{
+    margin-bottom: 30px;
+}
+
+.subscribe h4{
+    color: white;
+    margin-bottom: 20px;
+
+}
+form{
+    display: flex;
+    flex-direction: row;
+    border: 0px solid;
+    padding: 1px;
+    border-radius: 18px;
+}
+
+input{
+    flex-grow: 2;
+    border: 1px solid white;
+    height: 56px;
+    border-radius: 10px;
+    background-color: #2A5C99;
+    text-align: center;
+    font-size: 16px;
+
+}
+
+input:focus{
+    outline: none;
+}
+
+form:focus{
+    outline: 1px solid;
+}
+
+.form-btn{
+    border: none;
+    width: 110px;
+    padding-left: -20px;;
+    border-radius: 10px;
+    background: white;
+    color: black;
+    font-size: 16px;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    background-color: #2A5C99;
+    padding: 70px 0;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 90px;
+
+}
+
+.footer-col h4{
+    font-size: 16PX;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 2px;
+    width: 85px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col   ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.social-links{
+    margin-top: 10px;
+}
+
+.social-links a{
+    margin-right: 5px;
+    color: white;
+}

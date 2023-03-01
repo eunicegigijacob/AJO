@@ -1,0 +1,92 @@
+body{
+  font-family: 'Poppins', sans-serif;
+  background: #2A5C99;  
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  min-height: 100vh;
+  background: #EFF0F6;
+}
+
+input{
+  height: 56px;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  padding: 0 10px;
+  }
+
+  .email-input{
+    width: 520px;
+  }
+  
+  .bottom{
+    display: flex;
+    align-items: center;
+    height: 56px;
+    border: none;
+    border-radius: 8px;
+  }
+
+
+  .password-container input{
+    width: 100%;
+    max-width: 520px;
+    border: none;
+  }
+
+  form{
+    width: 525px;
+  }
+
+  input{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .check{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .special{
+    font-weight: 400;
+    text-decoration: underline;
+  }
+  
+  .signinBtn{
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #2A5C99;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 8px;
+  }
+  
+  .login-statement{
+    text-align: center;
+  
+  }
+  
+  .login-statement a{
+    border: 1px solid;
+    color:#2A5C99;
+    text-decoration: underline;
+  }
+  
+  form h2{
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0em;
+  }

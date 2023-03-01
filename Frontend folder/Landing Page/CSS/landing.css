@@ -385,9 +385,9 @@ header .container{
 }
 
 .footer-container{
-    width:  100%;
     max-width: 1440px;
     height: 442px;
+    background-color: transparent;
     margin: auto;   
 }
 
@@ -397,9 +397,20 @@ header .container{
     justify-content: space-around;
 }
 
+.logo{
+    margin-bottom: 30px;
+}
+
+.subscribe h4{
+    color: white;
+    margin-bottom: 20px;
+
+}
+
 ul{
     list-style: none;
 }
+
 .footer{
     background-color: #2A5C99;
     padding: 70px 0;
@@ -407,7 +418,7 @@ ul{
 
 .footer-col{
     width: 25%;
-    padding: 0 15px;
+    padding: 0 90px;
 
 }
 
@@ -415,4 +426,16 @@ ul{
     font-size: 16PX;
     font-weight: 600;
     color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    position: relative;
 }
+
+.footer-col h4::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 2px;
+}
+

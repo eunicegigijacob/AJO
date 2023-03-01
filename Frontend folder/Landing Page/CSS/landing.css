@@ -383,3 +383,81 @@ header .container{
     width: 364px;
     height: 29px;
 }
+
+.footer-container{
+    max-width: 1440px;
+    height: 442px;
+    background-color: transparent;
+    margin: auto;   
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.logo{
+    margin-bottom: 30px;
+}
+
+.subscribe h4{
+    color: white;
+    margin-bottom: 20px;
+
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    background-color: #2A5C99;
+    padding: 70px 0;
+}
+
+.footer-col{
+    width: 25 %;
+    padding: 0 90px;
+
+}
+
+.footer-col h4{
+    font-size: 16PX;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 2px;
+    width: 85px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col   ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.social-links{
+    margin-top: 10px;
+}
+
+.social-links a{
+    margin-right: 5px;
+    color: white;
+}

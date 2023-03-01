@@ -32,12 +32,10 @@ input{
     border-radius: 8px;
   }
 
-  .password-container svg{
-    width: 10%;
-  }
 
   .password-container input{
-    width: 90%;
+    width: 100%;
+    max-width: 520px;
     border: none;
   }
 
@@ -61,7 +59,9 @@ input{
     text-decoration: underline;
   }
   
-  button{
+  .signinBtn{
+    justify-content: center;
+    align-items: center;
     height: 56px;
     width: 100%;
     border: none;

@@ -406,6 +406,7 @@ header .container{
     margin-bottom: 20px;
 
 }
+
 form{
     display: flex;
     flex-direction: row;
@@ -453,9 +454,7 @@ ul{
 }
 
 .footer-col{
-    width: 25%;
-    padding: 0 90px;
-
+    width: 25 %;
 }
 
 .footer-col h4{

@@ -407,6 +407,43 @@ header .container{
 
 }
 
+form{
+    display: flex;
+    flex-direction: row;
+    border: 0px solid;
+    padding: 1px;
+    border-radius: 18px;
+}
+
+input{
+    flex-grow: 2;
+    border: 1px solid white;
+    height: 56px;
+    border-radius: 10px;
+    background-color: #2A5C99;
+    text-align: center;
+    font-size: 16px;
+
+}
+
+input:focus{
+    outline: none;
+}
+
+form:focus{
+    outline: 1px solid;
+}
+
+.form-btn{
+    border: none;
+    width: 110px;
+    padding-left: -20px;;
+    border-radius: 10px;
+    background: white;
+    color: black;
+    font-size: 16px;
+}
+
 ul{
     list-style: none;
 }
@@ -418,8 +455,6 @@ ul{
 
 .footer-col{
     width: 25 %;
-    padding: 0 90px;
-
 }
 
 .footer-col h4{

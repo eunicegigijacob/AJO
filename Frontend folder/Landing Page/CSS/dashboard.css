@@ -1,100 +1,141 @@
-.sidenav {
-    justify-content: center;
-    flex-direction: row;
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 160px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: white;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-  }
-  
-  .logo{
-    align-items: center;
-    width: 100px;
-    height: 15px;
-    left: 24px;
-    top: 21px;
-  }
-
-  
-  /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
-    color: #f1f1f1;
-    text-decoration: none;
-  }
-  
-  /* Style page content */
-  .main {
-    margin-left: 265px; /* Same as the width of the sidebar */
-    padding: 0px 10px;
-  }
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-
-  .option-1{
-    justify-content: center;
-    align-items: center;
-    height: 48px;
-    width: 255px;
-    left: 0px;
-    top: 0px;
-    border-radius: 8px;
-    background: lightblue;  
-   }
-   
-  .option-2{
-    justify-content: center;
-    align-items: center;
-    height: 48px;
-    width: 255px;
-    left: 0px;
-    top: 0px;
-    border-radius: 8px;
-    background: white;  
-   }
-
-  .option-3{
-    justify-content: center;
-    align-items: center;
-    height: 48px;
-    width: 255px;
-    left: 0px;
-    top: 0px;
-    border-radius: 8px;
-    background: white;  
-   }
-   
-  .option-4{
-    justify-content: center;
-    align-items: center;
-    height: 48px;
-    width: 255px;
-    left: 0px;
-    top: 0px;
-    border-radius: 8px;
-    background: white;  
+:root{  
+   --primary-color: white;
+   --text-color: #2A5C99;
+   --link-color: #6E7191;
+   --panel-color: white; 
+   --logo-color: white;
 }
-   
-   .links{
+
+body{
+    min-height: 100vh;
+    background-color: var(--page-color);
+}
+
+body.dark{
+    --page-color: #3A3B3C;
+    --panel-color: #242526;
+    --link-color: white;
+    --text-color: white;
+    --logo-color: #242526;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: var(--panel-color);
+}
+
+nav .logo-image{
+    display: flex;
+    justify-content: center;
+    min-width: 45px;
+    background-color: var(---logo-color);
+}
+
+nav .logo-image img{
+    width: 100px;
+    padding-top: 20px;
+    padding-right: 35px;
+}
+
+nav .menu-items{
+    
+    margin-top: 40px;
+    height: calc(100% - 90px);
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 16px;
+    justify-content: space-between;
+}
+
+.menu-items li{
+    list-style: none;
+}
+
+.menu-items li a{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-links li a:hover:before{
+    content: "";
     position: absolute;
-    width: 207px;
-    height: 252px;
-    left: 24px;
-    top: 102px;
-  }
+    left: -7px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+}
 
+.menu-items li a svg{
+    min-width: 25px;
+    padding-right: 20px;
+    height: 100%;
+    color: var(--text-color);
+}
 
-  
+.menu-items li a i{
+    min-width: 25px;
+    padding-right: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.menu-items li a .link-name{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--link-color);
+}
+
+.nav-links li a:hover i,
+.nav-links li a:hover .link-name{
+    color: var(--text-color);
+}
+
+.menu-items .mode{
+    display: flex;
+    align-items: center;
+}
+
+.menu-items .mode-toggle{
+    position: absolute;
+    right: 14px;
+    height: 30px;
+    min-width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.mode-toggle .switch{
+    position: relative;
+    display: inline-block;
+    border-radius: 25px;
+    height: 22px;
+    width: 40px;
+    background-color: #E6E6E6;
+}
+
+.switch:before{
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+body.dark .switch:before{
+    left: 20px;
+}

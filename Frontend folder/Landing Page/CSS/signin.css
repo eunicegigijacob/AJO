@@ -41,15 +41,20 @@ form {
   width: 525px;
 }
 
-input {
+/* input {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
+} */
 
 .check {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.rememeber-me {
+  display: inline;
 }
 
 .special {
@@ -143,14 +148,35 @@ form h2 {
 }
 
 @media screen and (max-width: 600px) {
-  .input-fields {
+
+  .input-fields,
+  .signinBtn {
     width: 90%;
+  }
+
+  .check {
+    display: block;
+  }
+
+  .container {
+    margin: 15px 10px;
   }
 }
 
 @media screen and (max-width: 480px) {}
 
-@media screen and (max-width: 400px) {}
+@media screen and (max-width: 400px) {
+
+  .input-fields,
+  .signinBtn {
+    width: 80%;
+  }
+
+  .placeholder-img {
+    margin-left: auto;
+    margin-right: 18%;
+  }
+}
 
 
 @media screen and (max-width: 360px) {}

@@ -161,9 +161,19 @@ form h2 {
   .container {
     margin: 15px 10px;
   }
+
+  .login-statement a {
+    display: block;
+    width: 40%;
+    margin: 0;
+    border: none;
+  }
+
+  .login-statement {
+    text-align: left;
+  }
 }
 
-@media screen and (max-width: 480px) {}
 
 @media screen and (max-width: 400px) {
 
@@ -177,6 +187,3 @@ form h2 {
     margin-right: 18%;
   }
 }
-
-
-@media screen and (max-width: 360px) {}

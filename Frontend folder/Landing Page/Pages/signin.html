@@ -16,35 +16,42 @@
 
 <body>
   <div class="container">
-    <form onsubmit="signin()">
-      <h2>Login</h2>
-      <div class="input">
-        <div class="input-container">
-          <span class="top">
-            Email Address
-          </span>
-          <input type="emial" name="emailaddress" class="email-input" id="email" required />
+    <div class="form-section">
+      <form class="login-form">
+        <div class="placeholder-img">
+          <img src="../resources/Logo.png" alt="" srcset="">
         </div>
-        <div class="password-container">
-          <span class="top">Password</span>
-          <div class="bottom">
-            <input type="password" id="password" name="password" required />
+        <h2>Login</h2>
+        <div class="input">
+          <div class="input-container">
+            <span class="top">
+              Email Address
+            </span>
+            <input type="emial" name="email" class="input-fields" id="email" required />
+          </div>
+          <div class="password-container">
+            <span class="top">Password</span>
+            <input type="password" id="password" name="password" required class="input-fields" />
           </div>
         </div>
-      </div>
-      <div class="check">
-        <input type="checkbox" name="checkbox" />
-        <p>Remember me </p>
-        <div class="forgot">
-          <p class="special">Forgot your password</p>
+        <div class="check">
+          <input type="checkbox" name="checkbox" />
+          <p>Remember me </p>
+          <div class="forgot">
+            <p class="special">Forgot your password</p>
+          </div>
         </div>
-      </div>
-      <input type="submit" class="signinBtn" value="Sign In" />
-      <p class="login-statement">Dont have an account? <a href="#"> Sign up </a> </p>
-    </form>
-    <aside>
-      <img src="../resources/Login avatar2.png" alt="Login Image" />
-    </aside>
+        <input type="submit" class="signinBtn" value="Sign In" />
+        <p class="login-statement">Dont have an account? <a href="#"> Sign up </a> </p>
+      </form>
+    </div>
+    <div class="img-section">
+      <aside>
+        <img src="../resources/Login avatar2.png" alt="Login Image" class="login-avatar" />
+      </aside>
+    </div>
+
+
   </div>
   <script src="../JS/signin.js"></script>
 </body>

@@ -15,69 +15,79 @@
 </head>
 
 <body>
+  <div class="placeholder-img">
+    <img src="../resources/Logo.png" alt="" srcset="">
+  </div>
   <div class="container">
-    <form>
-      <h2>Sign Up</h2>
-      <div class="input">
-        <div class="name">
-          <div class="input-container">
-            <span class="top">
-              First Name
-            </span>
-            <input type="text" name="firstname" />
+    <div class="img-section">
+      <img src="../resources/Signup2.png" class="login-avatar" />
+    </div>
+    <div>
+      <form class="signup-form">
+
+        <h2>Sign Up</h2>
+        <div class="input">
+          <div class="name">
+            <div class="input-container">
+              <label for="firstname" class="top">
+                First Name
+              </label>
+              <input type="text" name="firstname" id="firstname" />
+            </div>
+            <div class="input-container">
+              <label for="lastname" class="top">
+                Last Name
+              </label>
+              <input type="text" name="lastname" id="lastname" />
+            </div>
           </div>
           <div class="input-container">
             <span class="top">
-              Last Name
+              Email Address
             </span>
-            <input type="text" name="lastname" />
+            <input type="emial" name="emailaddress" />
           </div>
-        </div>
-        <div class="input-container">
-          <span class="top">
-            Email Address
-          </span>
-          <input type="emial" name="emailaddress" />
-        </div>
-        <div class="phone-container">
-          <span class="top">Phone Number</span>
-          <div class="bottom">
-            <svg width="68" height="36" viewBox="0 0 68 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="0.25" y="5.395" width="35.5" height="25.2143" rx="1.75" fill="white" stroke="#F5F5F5"
-                stroke-width="0.5" />
-              <mask id="mask0_292_14191" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="5" width="36"
-                height="26">
-                <rect x="0.25" y="5.395" width="35.5" height="25.2143" rx="1.75" fill="white" stroke="white"
+          <div class="phone-container">
+            <span class="top">Phone Number</span>
+            <div class="bottom">
+              <svg width="68" height="36" viewBox="0 0 68 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.25" y="5.395" width="35.5" height="25.2143" rx="1.75" fill="white" stroke="#F5F5F5"
                   stroke-width="0.5" />
-              </mask>
-              <g mask="url(#mask0_292_14191)">
-                <rect x="23.9999" y="5.145" width="12" height="25.7143" fill="#189B62" />
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 30.8593H12V5.145H0V30.8593Z" fill="#189B62" />
-              </g>
-              <g clip-path="url(#clip0_292_14191)">
-                <path d="M51 16L56 21L61 16H51Z" fill="black" />
-              </g>
-              <defs>
-                <clipPath id="clip0_292_14191">
-                  <rect width="24" height="24" fill="white" transform="translate(44 6)" />
-                </clipPath>
-              </defs>
-            </svg>
-            <input type="text" name="phonenumber" value="+234" />
+                <mask id="mask0_292_14191" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="5" width="36"
+                  height="26">
+                  <rect x="0.25" y="5.395" width="35.5" height="25.2143" rx="1.75" fill="white" stroke="white"
+                    stroke-width="0.5" />
+                </mask>
+                <g mask="url(#mask0_292_14191)">
+                  <rect x="23.9999" y="5.145" width="12" height="25.7143" fill="#189B62" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 30.8593H12V5.145H0V30.8593Z" fill="#189B62" />
+                </g>
+                <g clip-path="url(#clip0_292_14191)">
+                  <path d="M51 16L56 21L61 16H51Z" fill="black" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_292_14191">
+                    <rect width="24" height="24" fill="white" transform="translate(44 6)" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <input type="text" name="phonenumber" value="+234" />
+            </div>
           </div>
-        </div>
-        <div class="input-container">
-          <span class="top">
-            Invitation Code (Optional)
-          </span>
-          <input type="text" name="invitationcode" />
-        </div>
-        <button>Create Account</button>
-        <p class="login-statement">Already have an account? <a href="#"> Log in </a> </p>
-    </form>
-    <aside>
-      <img src="../resources/Signup2.png" />
-    </aside>
+          <div class="input-container">
+            <span class="top">
+              Invitation Code (Optional)
+            </span>
+            <input type="text" name="invitationcode" />
+          </div>
+          <button>Create Account</button>
+          <p class="login-statement">Already have an account? <a href="#"> Log in </a> </p>
+      </form>
+    </div>
+
+
+
+
   </div>
 </body>
 <script src="../JS/signup.js"></script>

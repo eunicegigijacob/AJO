@@ -1,93 +1,95 @@
-body{
+body {
   font-family: 'Poppins', sans-serif;
-  background: #2A5C99;  
+  background: #2A5C99;
 }
 
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row-reverse;
   gap: 40px;
   min-height: 100vh;
   background: #EFF0F6;
   border: 1px solid rgba(102, 102, 102, 0.5);
-  left: 100px;
-  top: 85px;
   border-radius: 24px;
+  margin: 30px 20px;
 
 }
 
-.name{
+.name {
   display: flex;
   justify-content: space-between;
 }
 
-.name .input-container{
+.name .input-container {
   width: 48%;
-  
-}
-
-input{
-height: 56px;
-border-radius: 8px;
-font-size: 16px;
-padding: 0 10px;
-}
-
-.bottom{
-display: flex;
-align-items: center;
-height: 56px;
-border: 1px solid black;
-border-radius: 8px;
-}
-
-.phone-container svg{
-width: 10%;
-}
-
-.phone-container input{
-  width: 90%;
-  border: none;
-}
-
-.phone-container .bottom{
-padding: 0 20px;
-gap: 5px;
 
 }
 
-.password-container svg{
+input {
+  height: 56px;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.phone-container svg {
   width: 10%;
 }
 
-.password-container input{
+.phone-container input {
   width: 90%;
   border: none;
 }
 
-form{
-  width: 525px;
-  background: #EFF0F6;
+.phone-container .bottom {
+  padding: 0 20px;
+  gap: 5px;
 
 }
 
-.input{
+.password-container svg {
+  width: 10%;
+}
+
+.password-container input {
+  width: 90%;
+  border: none;
+}
+
+form {
+  width: 90%;
+  background: #EFF0F6;
+  max-width: 100%;
+  margin-left: 20px;
+
+}
+
+.input {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.check{
+.check {
   display: flex;
 }
 
-.special{
+.special {
   font-weight: 400;
   text-decoration: underline;
 }
 
-button{
+button {
   height: 56px;
   width: 100%;
   border: none;
@@ -99,25 +101,89 @@ button{
   border-radius: 8px;
 }
 
-.login-statement{
+.login-statement {
   text-align: center;
 
 }
 
-.login-statement a{
+.login-statement a {
   border: 1px solid;
-  color:#2A5C99;
+  color: #2A5C99;
   text-decoration: underline;
 }
 
-form h2{
-font-size: 40px;
-font-weight: 500;
-line-height: 48px;
-letter-spacing: 0em;
+form h2 {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0em;
 }
-.input-container{
+
+.input-container {
   display: flex;
   flex-direction: column;
   gap: 2px;
+}
+
+.placeholder-img {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+}
+
+/* media queries begin */
+
+@media screen and (max-width: 1200px) {
+  * {
+    max-width: 100%;
+  }
+
+
+
+}
+
+
+@media screen and (max-width: 900px) {
+
+  form {
+    max-width: 85vw;
+  }
+
+  form h2 {
+    margin-top: 20%;
+  }
+
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    max-height: 100%;
+  }
+
+  .img-section {
+    display: none;
+  }
+
+  .placeholder-img {
+    display: block;
+    width: 20%;
+    margin-left: auto;
+    margin-right: 10px;
+    padding: 10px;
+  }
+
+
+
+
+}
+
+@media screen and (max-width: 500px) {
+  .name {
+    display: block;
+
+  }
+
+  .name .input-container {
+    width: 100%
+  }
 }

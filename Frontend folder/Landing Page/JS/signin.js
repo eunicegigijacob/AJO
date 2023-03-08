@@ -1,47 +1,30 @@
-function signin(){
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
-    if(email== "admin@gmail.com" && password=="admin123"){
-        window.location.assign("../Landing Page/HTML/index.html");
-        alert("Login Successful");
-    }
-    else{
-        alert("Invalid Information");
-        return;
-    }
-}
+const datas = {
+  email: document.getElementById('email'),
+  password: document.getElementById('password'),
+  form: document.querySelector('form'),
+};
+console.log(datas);
+datas.form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  let { email, password } = datas;
+  let inputs = {
+    email: email.value,
+    password: password.value,
+  };
+  senData('https://ajo.onrender.com/api/v1/auth/login', inputs);
+  email.value = password.value = '';
+});
 
-const form = document.getElementById('formlogin');
-if(form){
-  form.addEventListener("submit",(e)=>{
-   
-    e.preventDefault();
-  login()
- 
-  })
+const senData = async (url, inputs) => {
+  const response = await fetch(url, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    method: 'POST',
+    body: JSON.stringify(inputs),
+  });
+  const data = response.status;
+  if (data === 200) {
+    window.location.href = '../Pages/dashboard.html';
   }
-  function login(){
-  const username =   document.getElementById('username').value
-    const password = document.getElementById('password').value
-   
-axios.post('http://127.0.0.1:8080/Auth',{
-    username: username,
-    password: password
-}).then(res=>{
-  console.log(res)
-if(res.data[0].message == "invalid")
-{
-  Swal.fire({
-  icon: 'error',
-  title: 'Oops...',
-  text: 'Invalid username or password',
-})
-}else{
-  console.log(res.data[0].message)
-  localStorage.setItem("token",res.data[0].message)
-  window.location = '/dashboard'
-}
-}).catch(err=>{
-  console.log(err)
-})
-}
+};

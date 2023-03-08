@@ -177,6 +177,12 @@ form h2 {
 
 }
 
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 15px 10px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .name {
     display: block;

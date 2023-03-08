@@ -127,8 +127,8 @@ form h2 {
 
 .placeholder-img {
   position: absolute;
-  top: 15px;
-  right: 20px;
+  top: 20px;
+  right: 24px;
 }
 
 /* media queries begin */
@@ -174,4 +174,16 @@ form h2 {
 
 
 
+
+}
+
+@media screen and (max-width: 500px) {
+  .name {
+    display: block;
+
+  }
+
+  .name .input-container {
+    width: 100%
+  }
 }

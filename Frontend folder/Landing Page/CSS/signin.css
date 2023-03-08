@@ -11,39 +11,31 @@ body {
   min-height: 100vh;
   background: #EFF0F6;
   margin: 30px 20px;
+  padding: 25px;
+  border-radius: 24px;
 }
 
+.form-section {
+  width: 525px;
+  max-width: 100%;
+  /* border: 2px solid red; */
 
-
-input {
-  height: 56px;
-  border: none;
-  border-radius: 15px;
-  font-size: 16px;
-  padding: 0 10px;
 }
+
+.img-section {
+  width: 346px;
+  /* border: 2px solid blue; */
+}
+
 
 .input-fields {
   width: 100%;
   max-width: 520px;
   border: none;
-  /* width: 520px; */
-}
-
-.bottom {
-  display: flex;
-  align-items: center;
   height: 56px;
-  border: none;
-  border-radius: 8px;
+  border-radius: 15px;
+  font-size: 16px;
 }
-
-
-/* .password-container input {
-  width: 100%;
-  max-width: 520px;
-  border: none;
-} */
 
 form {
   width: 525px;
@@ -100,3 +92,65 @@ form h2 {
 .login-avatar {
   width: 85%;
 }
+
+.placeholder-img {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  * {
+    max-width: 100%;
+  }
+
+
+
+}
+
+@media screen and (max-width: 900px) {
+
+  form {
+    max-width: 85vw;
+  }
+
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    max-height: 100%;
+  }
+
+  .img-section {
+    display: none;
+  }
+
+  .placeholder-img {
+    display: block;
+    width: 20%;
+    margin-left: auto;
+    margin-right: 10px;
+    padding: 10px;
+  }
+
+  form h2 {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #14142B;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .input-fields {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {}
+
+@media screen and (max-width: 400px) {}
+
+
+@media screen and (max-width: 360px) {}

@@ -14,7 +14,7 @@ datas.form.addEventListener('submit', (e) => {
     password: password.value,
   };
   console.log(inputs);
-  senData('http://localhost:4000/api/v1/auth/login', inputs);
+  senData('https://ajo.onrender.com/api/v1/auth/login', inputs);
   email.value = password.value = '';
 });
 
@@ -30,7 +30,8 @@ const senData = async (url, inputs) => {
   const data = response.status;
   if (data === 200) {
     const dashboardResponse = await fetch(
-      'https://ajo.onrender.com/api/v1/dashboard/home'
+      'https://ajo.onrender.com/api/v1/dashboard/home',
+      { credentials: 'include' }
     );
     console.log(await dashboardResponse.json());
     // window.location.href = '../Pages/dashboard.html';

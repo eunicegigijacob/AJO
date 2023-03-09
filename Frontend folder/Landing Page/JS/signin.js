@@ -23,6 +23,7 @@ const senData = async (url, inputs) => {
     headers: {
       'Content-Type': 'application/json',
     },
+    credentials: 'include',
     method: 'POST',
     body: JSON.stringify(inputs),
   });

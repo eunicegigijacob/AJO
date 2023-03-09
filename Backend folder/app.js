@@ -25,4 +25,14 @@ app.get('*', (req, res) => {
   res.status(404).json('PAGE NOT FOUND');
 });
 
+app.all('*', function (req, res) {
+  res.header('Access-Control-Allow-Origin', 'https://ajo.onrender.com');
+  res.header('Access-Control-Expose-Headers', 'Content-Encoding,API-Key');
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Content-Type,Content-Length, Authorization, Accept,X-Requested-With'
+  );
+  res.header('Access-Control-Allow-Methods', 'PUT,POST,GET,DELETE,OPTIONS');
+});
+
 module.exports = { app };

@@ -24,7 +24,6 @@ const senData = async (url, inputs) => {
       'Content-Type': 'application/json',
     },
     method: 'POST',
-    credentials: 'include',
     body: JSON.stringify(inputs),
   });
   const data = response.status;

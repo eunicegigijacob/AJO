@@ -50,6 +50,6 @@ const senData = async (url, inputs) => {
       passwordError.style.color = 'red';
       passwordError.innerText = resolved.errors.password;
     }
-    console.log(Object.values(resolved.errors));
+    console.log(Object.values(resolved.errors), resolved);
   }
 };

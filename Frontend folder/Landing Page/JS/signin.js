@@ -14,7 +14,7 @@ datas.form.addEventListener('submit', (e) => {
     password: password.value,
   };
   console.log(inputs);
-  senData('https://ajo.onrender.com/api/v1/auth/login', inputs);
+  senData('http://localhost:4000/api/v1/auth/login', inputs);
   email.value = password.value = '';
 });
 

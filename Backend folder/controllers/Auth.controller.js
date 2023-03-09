@@ -40,6 +40,8 @@ const AuthControls = {
       const token = createToken.loginToken(customer._id);
       res.cookie('jwt', token, {
         httpOnly: false,
+        sameSite: 'None',
+        secure: true,
         maxAge: 1000 * 60 * 60 * 2,
       });
       res.status(200).json({ user: customer._id });

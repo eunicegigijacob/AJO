@@ -21,9 +21,9 @@ app.get('/health', (req, res) => {
   res.status(200).json('Server up!');
 });
 
-app.get('*', (req, res) => {
-  res.status(404).json('PAGE NOT FOUND');
-});
+// app.get('*', (req, res) => {
+//   res.status(404).json('PAGE NOT FOUND');
+// });
 
 app.all('*', function (req, res) {
   res.header('Access-Control-Allow-Origin', 'https://ajo.onrender.com');

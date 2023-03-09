@@ -6,7 +6,11 @@ const { routemanager } = require('./routes/routes');
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: 'https://project-ajo.netlify.app',
+  })
+);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -21,18 +25,18 @@ app.get('/health', (req, res) => {
   res.status(200).json('Server up!');
 });
 
-// app.get('*', (req, res) => {
-//   res.status(404).json('PAGE NOT FOUND');
-// });
-
-app.all('*', function (req, res) {
-  res.header('access-control-allow-origin', 'https://ajo.onrender.com');
-  res.header('Access-Control-Expose-Headers', 'Content-Encoding,API-Key');
-  res.header(
-    'Access-Control-Allow-Headers',
-    'Content-Type,Content-Length, Authorization, Accept,X-Requested-With'
-  );
-  res.header('Access-Control-Allow-Methods', 'PUT,POST,GET,DELETE,OPTIONS');
+app.get('*', (req, res) => {
+  res.status(404).json('PAGE NOT FOUND');
 });
+
+// app.all('*', function (req, res) {
+//   res.header('Access-Control-Allow-Origin', 'https://ajo.onrender.com');
+//   res.header('Access-Control-Expose-Headers': Content-Encoding,API-Key);
+//   res.header(
+//     'Access-Control-Allow-Headers',
+//     'Content-Type,Content-Length, Authorization, Accept,X-Requested-With'
+//   );
+//   res.header('Access-Control-Allow-Methods', 'PUT,POST,GET,DELETE,OPTIONS');
+// });
 
 module.exports = { app };

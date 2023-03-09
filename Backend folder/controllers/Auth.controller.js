@@ -44,6 +44,7 @@ const AuthControls = {
         maxAge: 1000 * 60 * 60 * 2,
       });
       res.status(200).json({ user: customer._id });
+      res.header('access-control-allow-origin', 'https://ajo.onrender.com');
     } catch (error) {
       const errors = handleErrors(error);
       res.status(400).json({ errors });

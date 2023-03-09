@@ -29,10 +29,10 @@ const senData = async (url, inputs) => {
   });
   const data = response.status;
   if (data === 200) {
-    // const dashboardResponse = await fetch(
-    //   'https://ajo.onrender.com/api/v1/dashboard/home'
-    // );
-    // console.log(await dashboardResponse.json());
+    const dashboardResponse = await fetch(
+      'https://ajo.onrender.com/api/v1/dashboard/home'
+    );
+    console.log(await dashboardResponse.json());
     // window.location.href = '../Pages/dashboard.html';
     console.log('success');
   }

@@ -26,7 +26,7 @@ app.get('/health', (req, res) => {
 // });
 
 app.all('*', function (req, res) {
-  res.header('Access-Control-Allow-Origin', 'https://ajo.onrender.com');
+  res.header('access-control-allow-origin', 'https://ajo.onrender.com');
   res.header('Access-Control-Expose-Headers', 'Content-Encoding,API-Key');
   res.header(
     'Access-Control-Allow-Headers',

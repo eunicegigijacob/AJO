@@ -9,7 +9,7 @@ const authMiddlewares = {
     if (token) {
       jwt.verify(token, process.env.SECRETE_KEY, (err, decoded) => {
         if (err) {
-          console.log(err);
+          console.log(err.message);
           const errors = handleErrors(err);
           res.status(400).json({ errors, message: 'user not loggrd in' });
         } else {

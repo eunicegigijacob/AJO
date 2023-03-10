@@ -12,7 +12,6 @@ const AuthControls = {
   signup: async (req, res) => {
     const { firstname, lastname, phoneNumber, invitecode, email, password } =
       req.body;
-    console.log(firstname, lastname, phoneNumber, invitecode, email, password);
 
     try {
       const newCustomer = await customerServices.createCustomer({

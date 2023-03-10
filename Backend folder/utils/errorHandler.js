@@ -1,6 +1,4 @@
 const handleErrors = (err) => {
-  console.log(err.message, err.code);
-
   let errors = {};
   //Duplicate key errors
   if (err.code === 11000) {
@@ -28,10 +26,10 @@ const handleErrors = (err) => {
     errors.password = 'That password is incorrect';
   }
 
-  // catch for other undefined errors
-  // else {
-  //   errors.error = err.message;
-  // }
+  //handle jwt errors
+  if (err.message.includes('jwt')) {
+    errors.error = err.message;
+  }
 
   return errors;
 };

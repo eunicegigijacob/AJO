@@ -9,7 +9,7 @@ const createToken = {
   },
   passwordResetToken: (data, password) => {
     const secrete = process.env.SECRETE_KEY + password;
-    return jwt.sign({ data }, secrete, { expiresIn: '30m' });
+    return jwt.sign({ data }, secrete, { expiresIn: '30d' });
   },
 };
 

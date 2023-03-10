@@ -17,6 +17,9 @@ window.addEventListener('DOMContentLoaded', async () => {
 
   if (Object.keys(result).includes('name')) {
     document.getElementById('name holder').innerText = `Hi ${result.name}`;
+    document.getElementById(
+      'wallet-bal'
+    ).innerText = `$${result.walletBalance}`;
   } else {
     window.location = '../Pages/signin.html';
   }

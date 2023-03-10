@@ -321,6 +321,16 @@ body.dark .switch:before{
     transition: .3s;
 }
 
+.withdraw:hover{
+    color: white;
+    background-color: #2A5C99;
+    transform: scale(1) ;
+}
+.fund:hover{
+    color: #2A5C99;
+    background-color: white;
+    transform: scale(1) ;
+}
 
 .boxes{
     display: flex;

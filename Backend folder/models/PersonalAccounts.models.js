@@ -6,6 +6,9 @@ const PersonalAccountSchema = new Schema(
       type: Schema.Types.ObjectId,
       required: [true, 'Please enter account owner'],
     },
+    AccountNumber: {
+      type: Number,
+    },
     target: {
       type: Number,
     },

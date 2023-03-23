@@ -23,6 +23,9 @@ const GroupAccountSchema = new Schema(
       type: String,
       required: [true, 'Please enter an account name'],
     },
+    AccountNumber: {
+      type: Number,
+    },
     Members: {
       type: [MemberSchema],
       required: [true, 'Please state the group memebers'],
